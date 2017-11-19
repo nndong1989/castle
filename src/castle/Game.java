@@ -55,10 +55,10 @@ public class Game {
 
     // 以下为用户命令
 
-    private void printHelp() {
-        System.out.print("迷路了吗？你可以做的命令有：go bye help");
-        System.out.println("如：\tgo east");
-    }
+//    private void printHelp() {
+//        System.out.print("迷路了吗？你可以做的命令有：go bye help");
+//        System.out.println("如：\tgo east");
+//    }
 
     private void goRoom(String direction) {
         Room nextRoom = null;
@@ -80,8 +80,14 @@ public class Game {
         Scanner in = new Scanner(System.in);
         String line = in.nextLine();
         String[] words = line.split(" ");
+        setAction("help", new HelpHandler(this));
+        setAction("bye", new ByeHandler(this));
 
-        actions.get(words[0]).doCMD();
+        Handler handler = actions.get(words[0]);
+        if (handler == null) {
+            handler = new HelpHandler(this);
+        }
+        handler.doCMD();
     }
 
     public static void main(String[] args) {

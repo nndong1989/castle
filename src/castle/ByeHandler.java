@@ -7,6 +7,7 @@ public class ByeHandler extends Handler {
 
     @Override
     public void doCMD() {
-
+        System.out.println("bye bye!");
+        System.exit(0);
     }
 }
