@@ -1,7 +1,7 @@
 package castle;
 
 public class ByeHandler extends Handler {
-    private ByeHandler(Game game) {
+    public ByeHandler(Game game) {
         super(game);
     }
 
