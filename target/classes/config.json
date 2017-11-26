@@ -1,0 +1,95 @@
+{
+  "currentRoomId": "r1",
+  "rooms": [
+    {
+      "id": "r1",
+      "description": "Outside"
+    },
+    {
+      "id": "r2",
+      "description": "Lobby"
+    },
+    {
+      "id": "r3",
+      "description": "Pub"
+    },
+    {
+      "id": "r4",
+      "description": "Study"
+    },
+    {
+      "id": "r5",
+      "description": "Bedroom"
+    },
+    {
+      "id": "r6",
+      "description": "Floor2Bedroom"
+    },
+    {
+      "id": "r7",
+      "description": "Floor2Study"
+    }
+  ],
+  "connections": [
+    {
+      "from": "r1",
+      "to": "r3",
+      "direction": "east"
+    },
+    {
+      "from": "r1",
+      "to": "r2",
+      "direction": "south"
+    },
+    {
+      "from": "r1",
+      "to": "r4",
+      "direction": "west"
+    },
+    {
+      "from": "r2",
+      "to": "r1",
+      "direction": "east"
+    },
+    {
+      "from": "r3",
+      "to": "r1",
+      "direction": "south"
+    },
+    {
+      "from": "r4",
+      "to": "r1",
+      "direction": "north"
+    },
+    {
+      "from": "r4",
+      "to": "r5",
+      "direction": "south"
+    },
+    {
+      "from": "r5",
+      "to": "r4",
+      "direction": "east"
+    },
+    {
+      "from": "r5",
+      "to": "r6",
+      "direction": "up"
+    },
+    {
+      "from": "r6",
+      "to": "r5",
+      "direction": "down"
+    },
+    {
+      "from": "r6",
+      "to": "r7",
+      "direction": "east"
+    },
+    {
+      "from": "r7",
+      "to": "r6",
+      "direction": "west"
+    }
+  ]
+}
